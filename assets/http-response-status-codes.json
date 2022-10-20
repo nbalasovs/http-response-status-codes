@@ -1,0 +1,337 @@
+[
+    {
+        "code": 100,
+        "phrase": "Continue",
+        "description": "An interim response. Indicates to the client that the initial part of the request has been received and has not yet been rejected by the server. The client SHOULD continue by sending the remainder of the request or, if the request has already been completed, ignore this response. The server MUST send a final response after the request has been completed."
+    },
+    {
+        "code": 101,
+        "phrase": "Switching Protocol",
+        "description": "Sent in response to an Upgrade request header from the client, and indicates the protocol the server is switching to."
+    },
+    {
+        "code": 102,
+        "phrase": "Processing",
+        "description": "Indicates that the server has received and is processing the request, but no response is available yet."
+    },
+    {
+        "code": 103,
+        "phrase": "Early Hints",
+        "description": "Primarily intended to be used with the Link header. It suggests the user agent start preloading the resources while the server prepares a final response."
+    },
+    {
+        "code": 200,
+        "phrase": "OK",
+        "description": "Indicates that the request has succeeded."
+    },
+    {
+        "code": 201,
+        "phrase": "Created",
+        "description": "Indicates that the request has succeeded and a new resource has been created as a result."
+    },
+    {
+        "code": 202,
+        "phrase": "Accepted",
+        "description": "Indicates that the request has been received but not completed yet. It is typically used in log running requests and batch processing."
+    },
+    {
+        "code": 203,
+        "phrase": "Non-Authoritative Information",
+        "description": "Indicates that the returned metainformation in the entity-header is not the definitive set as available from the origin server, but is gathered from a local or a third-party copy. The set presented MAY be a subset or superset of the original version."
+    },
+    {
+        "code": 204,
+        "phrase": "No Content",
+        "description": "The server has fulfilled the request but does not need to return a response body. The server may return the updated meta information."
+    },
+    {
+        "code": 205,
+        "phrase": "Reset Content",
+        "description": "Indicates the client to reset the document which sent this request."
+    },
+    {
+        "code": 206,
+        "phrase": "Partial Content",
+        "description": "It is used when the Range header is sent from the client to request only part of a resource."
+    },
+    {
+        "code": 207,
+        "phrase": "Multi-Status",
+        "description": "An indicator to a client that multiple operations happened, and that the status for each operation can be found in the body of the response."
+    },
+    {
+        "code": 208,
+        "phrase": "Already Reported",
+        "description": "Allows a client to tell the server that the same resource (with the same binding) was mentioned earlier. It never appears as a true HTTP response code in the status line, and only appears in bodies."
+    },
+    {
+        "code": 226,
+        "phrase": "IM Used",
+        "description": "The server has fulfilled a GET request for the resource, and the response is a representation of the result of one or more instance-manipulations applied to the current instance."
+    },
+    {
+        "code": 300,
+        "phrase": "Multiple Choices",
+        "description": "The request has more than one possible response. The user-agent or user should choose one of them."
+    },
+    {
+        "code": 301,
+        "phrase": "Moved Permanently",
+        "description": "The URL of the requested resource has been changed permanently. The new URL is given by the Location header field in the response. This response is cacheable unless indicated otherwise."
+    },
+    {
+        "code": 302,
+        "phrase": "Found",
+        "description": "The URL of the requested resource has been changed temporarily. The new URL is given by the Location field in the response. This response is only cacheable if indicated by a Cache-Control or Expires header field."
+    },
+    {
+        "code": 303,
+        "phrase": "See Other",
+        "description": "The response can be found under a different URI and SHOULD be retrieved using a GET method on that resource."
+    },
+    {
+        "code": 304,
+        "phrase": "Not Modified",
+        "description": "Indicates the client that the response has not been modified, so the client can continue to use the same cached version of the response."
+    },
+    {
+        "code": 305,
+        "phrase": "Use Proxy (Deprecated)",
+        "description": "Indicates that a requested response must be accessed by a proxy."
+    },
+    {
+        "code": 306,
+        "phrase": "(Unused)",
+        "description": "It is a reserved status code and is not used anymore."
+    },
+    {
+        "code": 307,
+        "phrase": "Temporary Redirect",
+        "description": "Indicates the client to get the requested resource at another URI with same method that was used in the prior request. It is similar to 302 Found with one exception that the same HTTP method will be used that was used in the prior request."
+    },
+    {
+        "code": 308,
+        "phrase": "Permanent Redirect",
+        "description": "Indicates that the resource is now permanently located at another URI, specified by the Location header. It is similar to 301 Moved Permanently with one exception that the same HTTP method will be used that was used in the prior request."
+    },
+    {
+        "code": 400,
+        "phrase": "Bad Request",
+        "description": "The request could not be understood by the server due to incorrect syntax. The client SHOULD NOT repeat the request without modifications."
+    },
+    {
+        "code": 401,
+        "phrase": "Unauthorized",
+        "description": "Indicates that the request requires user authentication information. The client MAY repeat the request with a suitable Authorization header field"
+    },
+    {
+        "code": 402,
+        "phrase": "Payment Required",
+        "description": "Reserved for future use. It is aimed for using in the digital payment systems."
+    },
+    {
+        "code": 403,
+        "phrase": "Forbidden",
+        "description": "Unauthorized request. The client does not have access rights to the content. Unlike 401, the client’s identity is known to the server."
+    },
+    {
+        "code": 404,
+        "phrase": "Not Found",
+        "description": "The server can not find the requested resource."
+    },
+    {
+        "code": 405,
+        "phrase": "Method Not Allowed",
+        "description": "The request HTTP method is known by the server but has been disabled and cannot be used for that resource."
+    },
+    {
+        "code": 406,
+        "phrase": "Not Acceptable",
+        "description": "The server doesn’t find any content that conforms to the criteria given by the user agent in the Accept header sent in the request."
+    },
+    {
+        "code": 407,
+        "phrase": "Proxy Authentication Required",
+        "description": "Indicates that the client must first authenticate itself with the proxy."
+    },
+    {
+        "code": 408,
+        "phrase": "Request Timeout",
+        "description": "Indicates that the server did not receive a complete request from the client within the server’s allotted timeout period."
+    },
+    {
+        "code": 409,
+        "phrase": "Conflict",
+        "description": "The request could not be completed due to a conflict with the current state of the resource."
+    },
+    {
+        "code": 410,
+        "phrase": "Gone",
+        "description": "The requested resource is no longer available at the server."
+    },
+    {
+        "code": 411,
+        "phrase": "Length Required",
+        "description": "The server refuses to accept the request without a defined Content- Length. The client MAY repeat the request if it adds a valid Content-Length header field."
+    },
+    {
+        "code": 412,
+        "phrase": "Precondition Failed",
+        "description": "The client has indicated preconditions in its headers which the server does not meet."
+    },
+    {
+        "code": 413,
+        "phrase": "Request Entity Too Large",
+        "description": "Request entity is larger than limits defined by server."
+    },
+    {
+        "code": 414,
+        "phrase": "Request-URI Too Long",
+        "description": "The URI requested by the client is longer than the server can interpret."
+    },
+    {
+        "code": 415,
+        "phrase": "Unsupported Media Type",
+        "description": "The media-type in Content-type of the request is not supported by the server."
+    },
+    {
+        "code": 416,
+        "phrase": "Requested Range Not Satisfiable",
+        "description": "The range specified by the Range header field in the request can’t be fulfilled."
+    },
+    {
+        "code": 417,
+        "phrase": "Expectation Failed",
+        "description": "The expectation indicated by the Expect request header field can’t be met by the server."
+    },
+    {
+        "code": 418,
+        "phrase": "I’m a teapot",
+        "description": "It was defined as April’s lool joke and is not expected to be implemented by actual HTTP servers. (RFC 2324)"
+    },
+    {
+        "code": 420,
+        "phrase": "Enhance Your Calm",
+        "description": "Returned by the Twitter Search and Trends API when the client is being rate limited."
+    },
+    {
+        "code": 422,
+        "phrase": "Unprocessable Entity",
+        "description": "The server understands the content type and syntax of the request entity, but still server is unable to process the request for some reason."
+    },
+    {
+        "code": 423,
+        "phrase": "Locked",
+        "description": "The resource that is being accessed is locked."
+    },
+    {
+        "code": 424,
+        "phrase": "Failed Dependency",
+        "description": "The request failed due to failure of a previous request."
+    },
+    {
+        "code": 425,
+        "phrase": "Too Early",
+        "description": "Indicates that the server is unwilling to risk processing a request that might be replayed."
+    },
+    {
+        "code": 426,
+        "phrase": "Upgrade Required",
+        "description": "The server refuses to perform the request. The server will process the request after the client upgrades to a different protocol."
+    },
+    {
+        "code": 428,
+        "phrase": "Precondition Required",
+        "description": "The origin server requires the request to be conditional."
+    },
+    {
+        "code": 429,
+        "phrase": "Too Many Requests",
+        "description": "The user has sent too many requests in a given amount of time (“rate limiting”)."
+    },
+    {
+        "code": 431,
+        "phrase": "Request Header Fields Too Large",
+        "description": "The server is unwilling to process the request because its header fields are too large."
+    },
+    {
+        "code": 444,
+        "phrase": "No Response (Nginx)",
+        "description": "The Nginx server returns no information to the client and closes the connection."
+    },
+    {
+        "code": 449,
+        "phrase": "Retry With (Microsoft)",
+        "description": "The request should be retried after performing the appropriate action."
+    },
+    {
+        "code": 450,
+        "phrase": "Blocked by Windows Parental Controls (Microsoft)",
+        "description": "Windows Parental Controls are turned on and are blocking access to the given webpage."
+    },
+    {
+        "code": 451,
+        "phrase": "Unavailable For Legal Reasons",
+        "description": "The user-agent requested a resource that cannot legally be provided."
+    },
+    {
+        "code": 499,
+        "phrase": "Client Closed Request (Nginx)",
+        "description": "The connection is closed by the client while HTTP server is processing its request, making the server unable to send the HTTP header back."
+    },
+    {
+        "code": 500,
+        "phrase": "Internal Server Error",
+        "description": "The server encountered an unexpected condition that prevented it from fulfilling the request."
+    },
+    {
+        "code": 501,
+        "phrase": "Not Implemented",
+        "description": "The HTTP method is not supported by the server and cannot be handled."
+    },
+    {
+        "code": 502,
+        "phrase": "Bad Gateway",
+        "description": "The server got an invalid response while working as a gateway to get the response needed to handle the request."
+    },
+    {
+        "code": 503,
+        "phrase": "Service Unavailable",
+        "description": "The server is not ready to handle the request."
+    },
+    {
+        "code": 504,
+        "phrase": "Gateway Timeout",
+        "description": "The server is acting as a gateway and cannot get a response in time for a request."
+    },
+    {
+        "code": 505,
+        "phrase": "HTTP Version Not Supported",
+        "description": "The HTTP version used in the request is not supported by the server."
+    },
+    {
+        "code": 506,
+        "phrase": "Variant Also Negotiates",
+        "description": "Indicates that the server has an internal configuration error: the chosen variant resource is configured to engage in transparent content negotiation itself, and is therefore not a proper endpoint in the negotiation process."
+    },
+    {
+        "code": 507,
+        "phrase": "Insufficient Storage",
+        "description": "The method could not be performed on the resource because the server is unable to store the representation needed to successfully complete the request."
+    },
+    {
+        "code": 508,
+        "phrase": "Loop Detected",
+        "description": "The server detected an infinite loop while processing the request."
+    },
+    {
+        "code": 510,
+        "phrase": "Not Extended",
+        "description": "Further extensions to the request are required for the server to fulfill it."
+    },
+    {
+        "code": 511,
+        "phrase": "Network Authentication Required",
+        "description": "Indicates that the client needs to authenticate to gain network access."
+    }
+]
